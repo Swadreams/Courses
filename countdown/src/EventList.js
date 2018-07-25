@@ -1,6 +1,13 @@
 import React,  { Component } from 'react';
-import { Text, FlatList, StyleSheet } from 'react-native';
 import EventCard from './EventCard';
+import ActionButton from 'react-native-action-button';
+import { Text, 
+         FlatList, 
+         StyleSheet         
+} from 'react-native';
+
+import { getEvents } from './shared/api';
+
 
 const styles = StyleSheet.create({
     list: {
@@ -15,6 +22,10 @@ class EventList extends Component {
         events: []
     }
 
+    static navigationOptions = {
+        title: 'Event List',
+      };
+
     componentDidMount() {
 
         setInterval(() => {
@@ -26,23 +37,39 @@ class EventList extends Component {
             })
         }, 1000)
 
-        const events = require('./data/db.json').events.map(e => ({
-            ...e,
-            date: new Date(e.date)
-        }));
-        this.setState({events});
+        // const events = require('./data/db.json').events.map(e => ({
+        //     ...e,
+        //     date: new Date(e.date)
+        // }));
+        //this.setState({events});
+        this.props.navigation.addListener('didFocus', () => {
+            getEvents().then(events => this.setState({events}));
+        })        
+    }
+
+    handleAddEvent = () => {
+        this.props.navigation.navigate('form');
     }
 
     render() {
-        return (
-            // <Text> Hello </Text>
+        return [
+            // <Text> Hello </Text>            
             <FlatList
+                key="flatlist"
                 style={styles.list}
                 data = {this.state.events}
-                renderItem={({item}) => <EventCard event={item} />}
                 keyExtractor={item => item.id}
-            />
-        )
+                renderItem={({item}) => 
+                    <EventCard event={item} />
+                }
+            />,
+            
+            <ActionButton
+                key="fab"
+                buttonColor="rgba(231,76,60,1)"
+                onPress={this.handleAddEvent}
+            />,
+        ];
     }
 }
 

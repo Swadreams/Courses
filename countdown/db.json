@@ -1,0 +1,39 @@
+{
+  "events": [
+    {
+      "title": "Release RN course",
+      "date": "2018-08-15T00:00:00.000Z",
+      "id": "05dafc66-bd91-43a0-a752-4dc40f039144"
+    },
+    {
+      "title": "Demo a new app",
+      "date": "2018-09-29T13:45:18.000Z",
+      "id": "001c9b6d-00a9-465c-a2d3-afb7176a0a87"
+    },
+    {
+      "title": "Go on holiday",
+      "date": "2018-07-28T08:09:24.000Z",
+      "id": "4cdbe78f-54df-4769-bf3b-02a930161ec5"
+    },
+    {
+      "title": "Come back from holiday",
+      "date": "2018-05-25T10:09:24.000Z",
+      "id": "81066e94-5e2a-410a-986c-67dcc72d3a82"
+    },
+    {
+      "title": "Come on this is not right",
+      "date": "2018-05-25T10:09:24.000Z",
+      "id": "2a3e81d8-320c-4097-b097-3d920ccd71ba"
+    },
+    {
+      "title": "Test",
+      "date": "2018-08-13T10:41:26.000Z",
+      "id": "b8f88d67-df40-498c-a54c-77e94766bd64"
+    },
+    {
+      "title": "My Favorite Event",
+      "date": "2018-07-25T11:44:22.000Z",
+      "id": "03c398bc-6147-4dc9-b650-93cd993e49b0"
+    }
+  ]
+}
