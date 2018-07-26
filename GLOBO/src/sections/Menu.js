@@ -26,7 +26,7 @@ export default class Menu extends Component {
                 </View>
 
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('Blog')}>
                         <Text style={styles.buttonText}> BLOG </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('Contact')}>
@@ -38,7 +38,7 @@ export default class Menu extends Component {
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('Quiz')}>
                         <Text style={styles.buttonText}> QUIZ </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('About')}>
                         <Text style={styles.buttonText}> ABOUT </Text>
                     </TouchableOpacity>
                 </View>

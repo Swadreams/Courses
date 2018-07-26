@@ -8,6 +8,9 @@ import Register from './src/views/Register';
 import Login from './src/views/Login';
 import Quiz from './src/views/Quiz';
 import Finish from './src/views/QuizFinish';
+import Blog from './src/views/Blog';
+import BlogDetail from './src/views/BlogDetail';
+import About from './src/views/Abouts';
 
 
 const MyRoutes = StackNavigator({
@@ -34,6 +37,15 @@ const MyRoutes = StackNavigator({
   },
   Finish: {
     screen: Finish
+  },
+  Blog: {
+    screen: Blog
+  },
+  BlogDetail: {
+    screen: BlogDetail
+  },
+  About: {
+    screen: About
   }
 })
 
