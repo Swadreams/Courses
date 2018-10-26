@@ -1,5 +1,5 @@
 # Courses
 
-##React Native Getting Started 
-- Started on 24th-July-2018
+## Java
+- 2. Encapsulation Exaple - 26.Oct.2018
 - Ended on #####
